@@ -1,13 +1,16 @@
 from setuptools import setup, find_packages
-import pathlib
+# import pathlib
 
-here = pathlib.Path(__file__).parent.resolve()
+# here = pathlib.Path(__file__).parent.resolve()
 
-long_description = (here / 'README.md').read_text(encoding='utf-8')
+# long_description = (here / 'README.md').read_text(encoding='utf-8')
 
-install_reqs = (here / 'requirements.txt').read_text(encoding='utf-8').splitlines()
+with open("README.md", "r", encoding="utf-8") as fh:
+    long_description = fh.read()
 
-reqs = install_reqs
+# install_reqs = (here / 'requirements.txt').read_text(encoding='utf-8').splitlines()
+
+# reqs = install_reqs
 
 # Arguments marked as "Required" below must be included for upload to PyPI.
 # Fields marked as "Optional" may be commented out.
@@ -121,7 +124,7 @@ reqs = install_reqs
 
 setup(
     name="pyrpa",
-    version="0.0.3",
+    version="0.0.5",
     author="otfsenter",
     author_email="newellzhou@163.com",
     description="some useful functions in work for SRE",
@@ -139,7 +142,7 @@ setup(
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules'
     ],
-    package_dir={"": "pyrpa"},
-    packages=find_packages(where="pyrpa"),
+    package_dir={"": "src"},
+    packages=find_packages(where="src"),
     python_requires=">=3.6",
 )

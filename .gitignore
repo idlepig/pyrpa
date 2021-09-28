@@ -5,4 +5,4 @@ __pycache__/
 dist/
 build/
 src/pyrpa.egg-info
-src/pyrpa/t.py
+pyrpa/pyrpa/t.py
