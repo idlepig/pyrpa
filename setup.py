@@ -20,7 +20,7 @@ setup(
     # This is a one-line description or tagline of what your project does. This
     # corresponds to the "Summary" metadata field:
     # https://packaging.python.org/specifications/core-metadata/#summary
-    description='Some practical examples of RPA (Robotic Process Automation)',  # Optional
+    description='some useful functions in work for SRE',  # Optional
 
     long_description=long_description,  # Optional
     long_description_content_type='text/markdown',  # Optional (see note above)
@@ -49,19 +49,14 @@ setup(
         # Specify the Python versions you support here. In particular, ensure
         # that you indicate you support Python 3. These classifiers are *not*
         # checked by 'pip install'. See instead 'python_requires' below.
-        'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.5',
-        'Programming Language :: Python :: 3.6',
-        'Programming Language :: Python :: 3.7',
-        'Programming Language :: Python :: 3.8',
-        'Programming Language :: Python :: 3 :: Only',
+        'Programming Language :: Python :: 3.8.2',
     ],
 
-    keywords='rpa, automation, robot, gui, test',  # Optional
+    keywords='rpa, automation, robot, scripts, operation',  # Optional
 
-    package_dir={'': 'src'},  # Optional
+    package_dir={'': 'pyrpa'},  # Optional
 
-    packages=find_packages(where='src'),  # Required
+    packages=find_packages(where='pyrpa'),  # Required
 
     python_requires='>=3, <4',
 
