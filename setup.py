@@ -124,10 +124,10 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="pyrpa",
-    version="0.0.5",
+    version="0.0.1",
     author="otfsenter",
     author_email="newellzhou@163.com",
-    description="some useful functions in work for SRE",
+    description="automation for SRE",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/otfsenter/pyrpa",
@@ -135,7 +135,7 @@ setup(
         "Bug Tracker": "https://github.com/otfsenter/pyrpa/issues",
     },
     classifiers=[
-        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'License :: OSI Approved :: Apache Software License',
         "Operating System :: OS Independent",
         'Development Status :: 1 - Planning',
