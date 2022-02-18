@@ -112,22 +112,14 @@ with open("README.md", "r", encoding="utf-8") as fh:
 #     #         'sample=sample:main',
 #     #     ],
 #     # },
-#
-#     project_urls={  # Optional
-#         'Bug Reports': 'https://github.com/otfsenter/pyrpa/issues',
-#         # 'Funding': 'https://donate.pypi.org',
-#         # 'Say Thanks!': 'http://saythanks.io/to/example',
-#         'Source': 'https://github.com/otfsenter/pyrpa',
-#     },
-# )
 
 
 setup(
     name="pyrpa",
     version="0.0.1",
-    author="otfsenter",
+    author="idlepig",
     author_email="newellzhou@163.com",
-    description="automation for SRE",
+    description="utils on website",
     long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/otfsenter/pyrpa",

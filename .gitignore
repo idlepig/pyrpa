@@ -6,3 +6,4 @@ dist/
 build/
 src/pyrpa.egg-info
 pyrpa/pyrpa/t.py
+today*.json
