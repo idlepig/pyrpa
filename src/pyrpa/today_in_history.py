@@ -8,30 +8,40 @@ import requests
 def gen_today_file_name() -> str:
     """
     generate today json filename
-    :return: filename, e.g.: today_in_history-*.json
+
+    Returns:
+        today_in_history-*.json
     """
     now = datetime.now().strftime('%m-%d')
-    file_today = 'today_in_history-%s.json' % now
+    file_today: str = 'today_in_history-%s.json' % now
     return file_today
 
 
 def is_today_file_exist(file_today: str) -> bool:
     """
     check whether today_in_history-*.json file exist.
-    :param file_today: today json filename
-    :return: bool
+
+    Args:
+        file_today: today json filename
+
+    Returns:
+        whether file exist
     """
     return os.path.exists(file_today)
 
 
 def format_data(data: dict) -> str:
     """
-    join each title by \n
-    :param data: json data
-    :return: formatted text
+    join each title by `\\n`
+
+    Args:
+        data: json data
+
+    Returns:
+        formatted text
     """
-    raw = ['日期: ' + i.get('date', '') + ', 内容: ' + i.get('title', '') for i in
-           data.get('result', [])]
+    raw: list = ['日期: ' + i.get('date', '') + ', 内容: ' + i.get('title', '')
+                 for i in data.get('result', [])]
     result = '\n'.join(raw)
     return result
 
@@ -39,8 +49,12 @@ def format_data(data: dict) -> str:
 def read_local_file(file_today: str) -> dict:
     """
     only get data once every day, read data after get data from api
-    :param file_today: local json filename
-    :return: dict
+
+    Args:
+        file_today: local json filename
+
+    Returns:
+        python dict for json data
     """
     data = json.load(open(file_today, encoding='utf-8'))
     return data
@@ -49,7 +63,9 @@ def read_local_file(file_today: str) -> dict:
 def get_data() -> dict:
     """
     data source, use requests get data
-    :return: dict
+
+    Returns:
+        python dict from api
     """
     url = 'https://api.oick.cn/lishi/api.php'
     response = requests.get(url).text
@@ -60,9 +76,9 @@ def get_data() -> dict:
 def write_local_file(file_today: str, data: dict) -> None:
     """
     store data to local file
-    :param file_today: today json filename
-    :param data: json data
-    :return: None
+    Args:
+        file_today: today json filename
+        data: json data
     """
     json.dump(data, open(file_today, 'w', encoding='utf-8'))
 
