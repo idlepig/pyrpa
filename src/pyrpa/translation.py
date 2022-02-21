@@ -37,7 +37,10 @@ def query(word: str) -> str:
 
 
 def main():
-    chinese = query('again')
+    import sys
+    word_raw = sys.argv[1:]
+    word = ''.join(word_raw).strip()
+    chinese = query(word)
     # file_word = 'translation.json'
     # words = read_local_file(file_word)
     # chinese = words.get(

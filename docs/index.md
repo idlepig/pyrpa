@@ -1,12 +1,46 @@
 # pyrpa
 
-## today in history
+utils get useful data in cli
 
-today_in_history get new in today in history
+## example 1: today in history
 
-## translation
+we can get today in history
 
-translation.pyget translation for words
+```shell
+python today_in_history.py
+```
+
+result
+
+```
+-----------------------------
+日期: 1303年02月22日, 内容: 元朝皇帝元英宗孛儿只斤·硕德八剌出生
+日期: 1395年02月22日, 内容: 明朝开国大将冯胜逝世
+日期: 1403年02月22日, 内容: 法国瓦卢瓦王朝国王查理七世出生
+日期: 1495年02月22日, 内容: 查理八世进入那不勒斯
+日期: 1732年02月22日, 内容: 美国第一任总统乔治·华盛顿出生
+日期: 1788年02月22日, 内容: 德国哲学家亚瑟·叔本华出生
+日期: 1799年02月22日, 内容: 中国清朝官绅、著名贪官和珅上吊自尽
+日期: 1848年02月22日, 内容: 法国“二月革命”爆发
+日期: 1875年02月22日, 内容: 法国画家让-巴蒂斯·卡米耶·柯洛逝世
+日期: 1898年02月22日, 内容: 朝鲜王朝摄政兴宣大院君李昰应逝世
+日期: 1926年02月22日, 内容: 法国第20任总统吉斯卡尔·德斯坦出生
+日期: 1927年02月22日, 内容: 上海工人举行第二次武装起义
+日期: 1942年02月22日, 内容: 奥地利作家斯蒂芬·茨威格逝世
+日期: 1986年02月22日, 内容: 菲律宾二月革命，总统费迪南德·马科斯下台
+日期: 1989年02月22日, 内容: 中国革命家朱良才逝世。
+```
 
 
+## example 2: translation
 
+get chinse from english
+
+```shell
+python translation.py useful
+```
+
+result
+```
+有用的
+```
