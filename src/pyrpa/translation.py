@@ -24,7 +24,7 @@ def query(word: str) -> str:
         word: word need be translated
 
     Returns:
-        chinese meaning for words
+        chinese meaning for words.
     """
     url = 'https://dict.youdao.com/jsonapi?q=%s' % word
     import requests
