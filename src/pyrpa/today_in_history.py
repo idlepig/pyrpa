@@ -1,3 +1,4 @@
+# encoding: utf-8
 import json
 import os
 from datetime import datetime
@@ -96,7 +97,7 @@ def main():
         write_local_file(file_today, data)
 
     data = format_data(data)
-    print('\n-----------------------------')
+    print('\n---------------------------')
     print(data)
 
 
