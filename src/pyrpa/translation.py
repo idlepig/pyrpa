@@ -41,11 +41,11 @@ def main():
     word_raw = sys.argv[1:]
     word = ''.join(word_raw).strip()
     chinese = query(word)
-    # file_word = 'translation.json'
-    # words = read_local_file(file_word)
-    # chinese = words.get(
-    #     'web_trans', {}).get('web-translation', [])[0].get(
-    #     'trans', [])[0].get('value', '')
+    file_word = 'translation.json'
+    words = read_local_file(file_word)
+    chinese = words.get(
+        'web_trans', {}).get('web-translation', [])[0].get(
+        'trans', [])[0].get('value', '')
 
     print(chinese)
 
